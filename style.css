@@ -1,0 +1,197 @@
+/************
+CSS RESET
+************/
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Prevent font size inflation */
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin-block-end: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1,
+h2,
+h3,
+h4,
+button,
+input,
+label {
+  line-height: 1.1;
+}
+
+/* Balance text wrapping on headings */
+h1,
+h2,
+h3,
+h4 {
+  text-wrap: balance;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+/* Make sure textareas without a rows attribute are not tiny */
+textarea:not([rows]) {
+  min-height: 10em;
+}
+
+/* Anything that has been anchored to should have extra scroll margin */
+:target {
+  scroll-margin-block: 5ex;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/***********
+END OF RESET
+***********/
+
+/* Colors */
+/* ===== WCAG-ready color tokens ===== */
+
+/* 1) Fresh & Natural */
+:root[data-theme='fresh'] {
+  --color-bg: #fafaf8;
+  --color-text: #333333; /* 12.09:1 on bg */
+
+  --color-link: #3f734a; /* 5.34:1 on bg */
+  --color-link-hover: #2d5234; /* 8.49:1 on bg */
+
+  --color-button-bg: #5aa469;
+  --color-button-text: #000000; /* 6.95:1 on btn bg */
+
+  --color-button-secondary-bg: #ffd166;
+  --color-button-secondary-text: #000000; /* 14.56:1 on btn bg */
+}
+
+/* 2) Warm & Comforting */
+:root[data-theme='warm'] {
+  --color-bg: #fff8f0;
+  --color-text: #2f2f2f; /* 12.71:1 */
+
+  --color-link: #9d5542; /* 5.23:1 */
+  --color-link-hover: #703d30; /* 8.31:1 */
+
+  --color-button-bg: #e07a5f;
+  --color-button-text: #000000; /* 7.12:1 */
+
+  --color-button-secondary-bg: #81b29a;
+  --color-button-secondary-text: #000000; /* 8.77:1 */
+}
+
+/* 3) Modern & Minimal */
+:root[data-theme='modern'] {
+  --color-bg: #ffffff;
+  --color-text: #1c1c1c; /* 17.04:1 */
+
+  --color-link: #b24b25; /* 5.35:1 */
+  --color-link-hover: #80361a; /* 8.54:1 */
+
+  --color-button-bg: #ff6b35;
+  --color-button-text: #000000; /* 7.41:1 */
+
+  --color-button-secondary-bg: #247ba0;
+  --color-button-secondary-text: #ffffff; /* 4.76:1 */
+}
+
+/* 4) Rustic & Earthy */
+:root[data-theme='rustic'] {
+  --color-bg: #f9f7f3;
+  --color-text: #2a2a2a; /* 13.41:1 */
+
+  --color-link: #875a44; /* 5.49:1 */
+  --color-link-hover: #654433; /* 8.08:1 */
+
+  --color-button-bg: #a97155;
+  --color-button-text: #000000; /* 5.18:1 */
+
+  --color-button-secondary-bg: #6b8e23;
+  --color-button-secondary-text: #000000; /* 5.52:1 */
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  margin: 24px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  color: var(--color-text);
+}
+
+a {
+  display: block;
+  min-height: 24px;
+  color: var(--color-link);
+}
+a:hover {
+  color: var(--color-link-hover);
+  text-decoration: none;
+}
+
+.nav {
+  display: flex;
+  gap: 8px;
+  flex-direction: row;
+}
+
+.nav li {
+  list-style-type: none;
+}
